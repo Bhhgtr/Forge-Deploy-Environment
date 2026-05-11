@@ -19,4 +19,5 @@ spec:
           image: ghcr.io/bhhgtr/demo-app:a098efbdbe6f694ab602cbd9b2c9ec0959838807
           ports:
             - containerPort: 3000
+            
 
