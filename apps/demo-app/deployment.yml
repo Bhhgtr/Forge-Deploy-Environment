@@ -13,7 +13,7 @@ spec:
         app: demo-app
     spec:
       imagePullSecrets:
-        - name: Container Registry Access
+        - name: ghcr-pull
       containers:
         - name: demo-app
           image: ghcr.io/bhhgtr/demo-app:a098efbdbe6f694ab602cbd9b2c9ec0959838807
