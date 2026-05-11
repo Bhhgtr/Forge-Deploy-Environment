@@ -16,7 +16,7 @@ spec:
         - name: Container Registry Access
       containers:
         - name: demo-app
-          image: ghcr.io/bhhgtr/demo-app:latest
+          image: ghcr.io/bhhgtr/demo-app:a098efbdbe6f694ab602cbd9b2c9ec0959838807
           ports:
             - containerPort: 3000
 
