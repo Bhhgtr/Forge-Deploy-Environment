@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
         - name: demo-app
-          image: ghcr.io/bhhgtr/demo-app:latest
+          image: ghcr.io/bhhgtr/demo-app:f54b8cf495d83d0d19156e8fee6ad8346a9e5d46
           ports:
             - containerPort: 3000
-            
