@@ -17,3 +17,4 @@ spec:
           image: ghcr.io/bhhgtr/demo-app:latest
           ports:
             - containerPort: 3000
+            
