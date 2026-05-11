@@ -12,8 +12,10 @@ spec:
       labels:
         app: demo-app
     spec:
+      imagePullSecrets:
+        - name: ghcr-pull
       containers:
         - name: demo-app
-          image: ghcr.io/bhhgtr/demo-app:f54b8cf495d83d0d19156e8fee6ad8346a9e5d46
+          image: ghcr.io/bhhgtr/demo-app:latest
           ports:
             - containerPort: 3000
