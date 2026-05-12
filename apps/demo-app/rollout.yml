@@ -1,23 +1,36 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: demo-app
+
 spec:
-  replicas: 1
+  replicas: 5
+
   selector:
     matchLabels:
       app: demo-app
+
   template:
     metadata:
       labels:
         app: demo-app
+
     spec:
       imagePullSecrets:
         - name: ghcr-pull
+
       containers:
         - name: demo-app
-          image: ghcr.io/bhhgtr/demo-app:24d8df2
+          image: ghcr.io/shyaminda/demo-app:<IMAGE_SHA>
+
           ports:
             - containerPort: 3000
-            
 
+  strategy:
+    canary:
+      stableService: demo-app-stable
+      canaryService: demo-app-canary
+
+      steps:
+        - setWeight: 10
+        - pause: {}
