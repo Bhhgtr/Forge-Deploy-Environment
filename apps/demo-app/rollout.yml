@@ -4,7 +4,7 @@ metadata:
   name: demo-app
 
 spec:
-  replicas: 5
+  replicas: 2
 
   selector:
     matchLabels:
@@ -21,7 +21,7 @@ spec:
 
       containers:
         - name: demo-app
-          image: ghcr.io/shyaminda/demo-app:<IMAGE_SHA>
+          image: ghcr.io/bhhgtr/demo-app:<IMAGE_SHA>
 
           ports:
             - containerPort: 3000
